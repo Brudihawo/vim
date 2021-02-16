@@ -1,0 +1,33 @@
+[submodule "pack/editing/start/darcula"]
+	path = pack/editing/start/darcula
+	url = https://github.com/blueshirts/darcula
+[submodule "pack/editing/start/lightline.vim"]
+	path = pack/editing/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "pack/editing/start/nerdtree"]
+	path = pack/editing/start/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule "pack/editing/start/syntastic"]
+	path = pack/editing/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic
+[submodule "pack/editing/start/tabnine-vim"]
+	path = pack/editing/start/tabnine-vim
+	url = https://github.com/codota/tabnine-vim
+[submodule "pack/editing/start/vim-commentary"]
+	path = pack/editing/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "pack/editing/start/vim-devicons"]
+	path = pack/editing/start/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons
+[submodule "pack/editing/start/vim-fugitive"]
+	path = pack/editing/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "pack/editing/start/vim-gitbranch"]
+	path = pack/editing/start/vim-gitbranch
+	url = https://github.com/itchyny/vim-gitbranch
+[submodule "pack/editing/start/vim-nerdtree-syntax-highlight"]
+	path = pack/editing/start/vim-nerdtree-syntax-highlight
+	url = https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
+[submodule "pack/editing/start/vim-rainbow"]
+	path = pack/editing/start/vim-rainbow
+	url = https://github.com/frazrepo/vim-rainbow
