@@ -62,9 +62,10 @@ highlight CursorLine ctermbg=cyan ctermfg=black
 highlight Visual ctermfg=white ctermbg=darkblue
 " Highlighting Visual
 highlight DiffAdd ctermfg=Black ctermbg=DarkGray
-highlight DiffDelete ctermfg=Black ctermbg=Red 
+highlight DiffDelete ctermfg=Red ctermbg=black
 highlight DiffChange ctermfg=DarkCyan ctermbg=cyan
 highlight DiffText ctermfg=Red ctermbg=cyan
+
 
 " Commentstrings
 autocmd FileType python setlocal commentstring=#\ %s
