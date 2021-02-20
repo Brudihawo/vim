@@ -27,7 +27,7 @@ set ruler
 set showcmd
 set autoindent
 let g:indent_guides_enable_on_vim_startup=1
-"set hidden
+
 set nostartofline
 set ruler
 set laststatus=2
@@ -36,7 +36,6 @@ set number relativenumber
 set notimeout ttimeout ttimeoutlen=200
 set pastetoggle=<F11>
 set noshowmode 
-
 
 " layout
 set cmdheight=5
@@ -65,4 +64,6 @@ autocmd FileType cpp setlocal commentstring=//\ %s
 nnoremap <C-N> :NERDTreeToggle<CR>
 nnoremap <A-Left> :tabprev<CR>
 nnoremap <A-Right> :tabnext<CR>
-
+nnoremap <A-C> :colorscheme default<CR>
+nnoremap <Bar>c :set cursorline!<CR>
+nnoremap <Bar>n :set relativenumber!<CR>
