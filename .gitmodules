@@ -31,3 +31,6 @@
 [submodule "pack/editing/start/vim-rainbow"]
 	path = pack/editing/start/vim-rainbow
 	url = https://github.com/frazrepo/vim-rainbow
+[submodule "pack/editing/start/vim-wintabs"]
+	path = pack/editing/start/vim-wintabs
+	url = https://github.com/zefei/vim-wintabs
