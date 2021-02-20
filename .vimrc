@@ -73,8 +73,11 @@ autocmd FileType cpp setlocal commentstring=//\ %s
 
 " Remappings
 nnoremap <C-N> :NERDTreeToggle<CR>
-nnoremap <A-Left> :tabprev<CR>
-nnoremap <A-Right> :tabnext<CR>
 nnoremap <A-C> :colorscheme default<CR>
 nnoremap <Bar>c :set cursorline!<CR>
 nnoremap <Bar>n :set relativenumber!<CR>
+
+""" Wintabs
+nnoremap <A-K> :WintabsNext<CR>
+nnoremap <A-J> :WintabsPrevious<CR>
+nnoremap <A-X> :WintabsClose<CR>

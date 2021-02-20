@@ -34,3 +34,6 @@
 [submodule "pack/editing/start/vim-indent-guides"]
 	path = pack/editing/start/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides
+[submodule "pack/editing/start/vim-wintabs"]
+	path = pack/editing/start/vim-wintabs
+	url = https://github.com/zefei/vim-wintabs
