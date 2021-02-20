@@ -36,7 +36,6 @@ set notimeout ttimeout ttimeoutlen=200
 set pastetoggle=<F11>
 set noshowmode 
 
-
 " layout
 set cmdheight=5
 set laststatus=2
