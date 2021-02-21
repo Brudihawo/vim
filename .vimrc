@@ -54,16 +54,15 @@ let g:lightline = {
   \ 'colorscheme': 'darcula',
   \ }
 
-" Highlighting 
-highlight LineNr ctermfg=gray
-highlight CursorLineNR ctermbg=darkblue ctermfg=white
-highlight CursorLine ctermbg=cyan ctermfg=black
-highlight Visual ctermfg=white ctermbg=darkblue
-" Highlighting Visual
-highlight DiffAdd ctermfg=Black ctermbg=DarkGray
+"" Highlighting 
+"highlight LineNr ctermfg=gray
+"highlight CursorLineNR ctermbg=darkblue ctermfg=white
+"highlight CursorLine ctermbg=cyan ctermfg=black
+"" Highlighting Diff
+highlight DiffAdd ctermfg=black ctermbg=darkgreen
 highlight DiffDelete ctermfg=Red ctermbg=black
-highlight DiffChange ctermfg=DarkCyan ctermbg=cyan
-highlight DiffText ctermfg=Red ctermbg=cyan
+highlight DiffChange ctermfg=black ctermbg=darkblue
+highlight DiffText ctermfg=yellow ctermbg=darkblue
 
 
 " Commentstrings
