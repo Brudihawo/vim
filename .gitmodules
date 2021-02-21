@@ -34,3 +34,12 @@
 [submodule "pack/editing/start/vim-airline-themes"]
 	path = pack/editing/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "pack/editing/start/denite.nvim"]
+	path = pack/editing/start/denite.nvim
+	url = https://github.com/Shougo/denite.nvim
+[submodule "pack/editing/start/nvim-yarp"]
+	path = pack/editing/start/nvim-yarp
+	url = https://github.com/roxma/nvim-yarp
+[submodule "pack/editing/start/vim-hug-neovim-rpc"]
+	path = pack/editing/start/vim-hug-neovim-rpc
+	url = https://github.com/roxma/vim-hug-neovim-rpc
