@@ -42,11 +42,6 @@ set noshowmode
 set cmdheight=5
 set laststatus=2
 set ambiwidth=single
-noremap <silent> <A-J> :resize +3<CR>
-nnoremap <silent> <A-K> :resize -3<CR>
-nnoremap <silent> <A-H> :vertical resize -3<CR>
-nnoremap <silent> <A-L> :vertical resize +3<CR>
-
 
 " Highlighting Cursor 
 highlight CursorLineNR ctermbg=darkgray ctermfg=white
@@ -58,7 +53,7 @@ highlight DiffChange ctermfg=black ctermbg=darkblue
 highlight DiffText ctermfg=yellow ctermbg=darkblue
 
 " airline colors and colorscheme
-let g:airline_theme='badwolf'
+let g:airline_theme='light'
 " colorscheme darcula
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter="unique_tail_improved"
@@ -91,6 +86,12 @@ nnoremap <Bar>n :set relativenumber!<CR>
 nnoremap <C-j> :bnext<CR>
 nnoremap <C-k> :bprev<CR>
 nnoremap <C-x> :bdelete<CR>
+
+" Window Resizing
+nnoremap <silent> <A-J> :resize +3<CR>
+nnoremap <silent> <A-K> :resize -3<CR>
+nnoremap <silent> <A-H> :vertical resize -3<CR>
+nnoremap <silent> <A-L> :vertical resize +3<CR>
 
 "" Denite
 autocmd FileType denite call s:denite_my_settings()
