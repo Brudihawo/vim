@@ -54,11 +54,10 @@ let g:lightline = {
   \ 'colorscheme': 'darcula',
   \ }
 
-"" Highlighting 
-"highlight LineNr ctermfg=gray
-"highlight CursorLineNR ctermbg=darkblue ctermfg=white
-"highlight CursorLine ctermbg=cyan ctermfg=black
-"" Highlighting Diff
+" Highlighting Cursor 
+highlight CursorLineNR ctermbg=green ctermfg=black
+highlight CursorLine ctermbg=darkgreen ctermfg=black
+" Highlighting Diff
 highlight DiffAdd ctermfg=black ctermbg=darkgreen
 highlight DiffDelete ctermfg=Red ctermbg=black
 highlight DiffChange ctermfg=black ctermbg=darkblue
