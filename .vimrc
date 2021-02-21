@@ -38,10 +38,15 @@ set notimeout ttimeout ttimeoutlen=200
 set pastetoggle=<F11>
 set noshowmode 
 
-" layout
+" layout and resizing
 set cmdheight=5
 set laststatus=2
 set ambiwidth=single
+noremap <silent> <A-J> :resize +3<CR>
+nnoremap <silent> <A-K> :resize -3<CR>
+nnoremap <silent> <A-H> :vertical resize -3<CR>
+nnoremap <silent> <A-L> :vertical resize +3<CR>
+
 
 " Highlighting Cursor 
 highlight CursorLineNR ctermbg=darkgray ctermfg=white
