@@ -26,10 +26,10 @@ syntax on
 set ruler
 set showcmd
 set autoindent
+set cursorline
 let g:indent_guides_enable_on_vim_startup=1
 
 set nostartofline
-set ruler
 set laststatus=2
 set confirm
 set number relativenumber
@@ -41,29 +41,32 @@ set noshowmode
 set cmdheight=5
 set laststatus=2
 
-" lightline colors and colorscheme
+" airline colors and colorscheme
 colorscheme darcula
-set cursorline
-let g:lightline = {
-  \ 'active': {
-  \   'left': [['mode', 'paste'],
-  \            ['gitbranch', 'readonly', 'filename', 'modified']]
-  \ },
-  \ 'component_function': {
-  \   'gitbranch': 'gitbranch#name',
-  \ },
-  \ 'colorscheme': 'darcula',
-  \ }
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter="unique_tail_improved"
+let g:airline_powerline_fonts=1
+let g:airline#extensions#branch#enabled=1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols={}
+endif
+let g:airline_symbols.maxlinenr = ' col'
+let g:airline_symbols.branch = ''
 
 " Commentstrings
 autocmd FileType python setlocal commentstring=#\ %s
 autocmd FileType c setlocal commentstring=//\ %s
 autocmd FileType cpp setlocal commentstring=//\ %s
+autocmd FileType vim setlocal commentstring=\"\ %s
 
 " Remappings
 nnoremap <C-N> :NERDTreeToggle<CR>
-nnoremap <A-Left> :bprev<CR>
-nnoremap <A-Right> :bnext<CR>
 nnoremap <A-C> :colorscheme default<CR>
 nnoremap <Bar>c :set cursorline!<CR>
 nnoremap <Bar>n :set relativenumber!<CR>
+
+""" Wintabs
+nnoremap <A-k> :WintabsNext<CR>
+nnoremap <A-j> :WintabsPrevious<CR>
+nnoremap <A-x> :WintabsClose<CR>

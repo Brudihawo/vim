@@ -1,9 +1,6 @@
 [submodule "pack/editing/start/darcula"]
 	path = pack/editing/start/darcula
 	url = https://github.com/blueshirts/darcula
-[submodule "pack/editing/start/lightline.vim"]
-	path = pack/editing/start/lightline.vim
-	url = https://github.com/itchyny/lightline.vim
 [submodule "pack/editing/start/nerdtree"]
 	path = pack/editing/start/nerdtree
 	url = https://github.com/preservim/nerdtree
@@ -31,6 +28,9 @@
 [submodule "pack/editing/start/vim-rainbow"]
 	path = pack/editing/start/vim-rainbow
 	url = https://github.com/frazrepo/vim-rainbow
-[submodule "pack/editing/start/vim-wintabs"]
-	path = pack/editing/start/vim-wintabs
-	url = https://github.com/zefei/vim-wintabs
+[submodule "pack/editing/start/vim-airline"]
+	path = pack/editing/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "pack/editing/start/vim-airline-themes"]
+	path = pack/editing/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
