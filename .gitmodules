@@ -43,3 +43,6 @@
 [submodule "pack/editing/start/vim-hug-neovim-rpc"]
 	path = pack/editing/start/vim-hug-neovim-rpc
 	url = https://github.com/roxma/vim-hug-neovim-rpc
+[submodule "pack/editing/start/nvim-colorizer.lua"]
+	path = pack/editing/start/nvim-colorizer.lua
+	url = https://github.com/norcalli/nvim-colorizer.lua
