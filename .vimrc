@@ -28,6 +28,9 @@ set cursorline
 let g:indent_guides_enable_on_vim_startup=1
 let g:rainbow_active=1
 
+" HTML Color code Highlighting
+let g:Hexokinase_highlighters=["virtual"]
+
 set nostartofline
 set laststatus=2
 set confirm
@@ -68,6 +71,7 @@ autocmd FileType python setlocal commentstring=#\ %s
 autocmd FileType c setlocal commentstring=//\ %s
 autocmd FileType cpp setlocal commentstring=//\ %s
 autocmd FileType vim setlocal commentstring=\"\ %s
+autocmd FileType lua setlocal commentstring=--\ %s
 
 " Remappings
 nnoremap <C-N> :NERDTreeToggle<CR>
