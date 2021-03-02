@@ -6,8 +6,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set backspace=indent,eol,start
-set foldmethod=syntax
-set foldnestmax=3
 set display+=lastline
 set linebreak
 set wrap
@@ -55,7 +53,7 @@ let g:airline#extensions#syntastic#enabled=1
 let g:airline#extensions#vimtex#enabled=1
 let g:airline#extensions#vimcmake#enabled=1
 let g:airline#extensions#whitespace#enabled=1
-
+let g:airline_skip_empty_sections=1
 let g:airline#extensions#whitespace#trailing_format='trailing[%s]'
 
 if !exists('g:airline_symbols')
@@ -80,6 +78,12 @@ nnoremap <C-j> :bnext<CR>
 nnoremap <C-k> :bprev<CR>
 nnoremap <C-x> :bdelete<CR>
 
+" Resizing
+nnoremap <A-j> :vertical resize +3<CR>
+nnoremap <A-k> :vertical resize -3<CR>
+nnoremap <A-h> :resize -3<CR>
+nnoremap <A-l> :resize +3<CR>
+
 "" Denite
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
@@ -96,3 +100,28 @@ function! s:denite_my_settings() abort
   nnoremap <silent><buffer><expr> <Space>
   \ denite#do_map('toggle_select').'j'
 endfunction
+
+
+
+" Extending text objects
+let pairs = { ':' : ':',
+            \ '.' : '.',
+            \ '/' : '/',
+            \ '<bar>' : '<bar>',
+            \ }
+
+
+for [key, value] in items(pairs)
+  exec "nnoremap ci".key." T".key."ct".key
+  exec "nnoremap ca".key." F".key."cf".key
+
+  exec "nnoremap di".key." T".key."dt".key
+  exec "nnoremap da".key." F".key."df".key
+  
+  exec "nnoremap vi".key." T".key."vt".key
+  exec "nnoremap va".key." F".key."vf".key
+
+  exec "nnoremap yi".key." T".key."yt".key
+  exec "nnoremap ya".key." F".key."yf".key
+endfor
+
