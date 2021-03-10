@@ -25,6 +25,7 @@ set ruler
 set showcmd
 set autoindent
 set cursorline
+set termguicolors
 let g:indent_guides_enable_on_vim_startup=1
 let g:rainbow_active=1
 
@@ -65,13 +66,23 @@ endif
 let g:airline_symbols.maxlinenr = ' col'
 let g:airline_symbols.branch = ''
 let g:airline_right_alt_sep = " "
-let g:airline_right_sep = " "
+" let g:airline_right_alt_sep = "|"
+" let g:airline_left_alt_sep = ""
+let g:airline_left_alt_sep = "|"
+" let g:airline_right_sep = ""
+let g:airline_right_sep = ""
+let g:airline_left_sep = ""
 
+" Setting weird filetypes
+autocmd BufNewFile,BufRead .xprofile set filetype=xprofile
+
+" Setting comment strings
 autocmd FileType python setlocal commentstring=#\ %s
 autocmd FileType c setlocal commentstring=//\ %s
 autocmd FileType cpp setlocal commentstring=//\ %s
 autocmd FileType vim setlocal commentstring=\"\ %s
 autocmd FileType lua setlocal commentstring=--\ %s
+autocmd FileType .xprofile setlocal commentstring=#\ %s
 
 " Remappings
 nnoremap <C-N> :NERDTreeToggle<CR>
@@ -112,6 +123,7 @@ let pairs = { ':' : ':',
             \ '.' : '.',
             \ '/' : '/',
             \ '<bar>' : '<bar>',
+            \ '_' : '_',
             \ }
 
 

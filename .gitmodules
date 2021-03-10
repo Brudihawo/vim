@@ -52,3 +52,6 @@
 [submodule "pack/editing/start/vim-hexokinase"]
 	path = pack/editing/start/vim-hexokinase
 	url = https://github.com/RRethy/vim-hexokinase
+[submodule "pack/editing/start/vim-surround"]
+	path = pack/editing/start/vim-surround
+	url = https://github.com/tpope/vim-surround
