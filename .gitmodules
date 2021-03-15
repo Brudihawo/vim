@@ -55,3 +55,9 @@
 [submodule "pack/editing/start/vim-surround"]
 	path = pack/editing/start/vim-surround
 	url = https://github.com/tpope/vim-surround
+[submodule "pack/editing/start/fzf"]
+	path = pack/editing/start/fzf
+	url = https://github.com/junegunn/fzf
+[submodule "pack/editing/start/vim-fish"]
+	path = pack/editing/start/vim-fish
+	url = https://github.com/dag/vim-fish
