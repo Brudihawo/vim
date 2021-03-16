@@ -61,3 +61,6 @@
 [submodule "pack/editing/start/vim-fish"]
 	path = pack/editing/start/vim-fish
 	url = https://github.com/dag/vim-fish
+[submodule "pack/editing/start/fzf.vim"]
+	path = pack/editing/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim

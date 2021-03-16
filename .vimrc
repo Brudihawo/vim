@@ -98,7 +98,7 @@ nnoremap <C-k> :bprev<CR>
 nnoremap <C-x> :bdelete<CR>
 
 " Fuzzy Finding
-nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f', 'window':{'width': 0.9, 'height': 0.6}})<CR>
+nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \)', 'window':{'width': 0.9, 'height': 0.6}})<CR>
 
 " Resizing
 nnoremap <A-j> :vertical resize +3<CR>
