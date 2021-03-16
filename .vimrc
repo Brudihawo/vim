@@ -128,6 +128,7 @@ endfunction
 " Extending text objects
 let pairs = { ':' : ':',
             \ '.' : '.',
+            \ ',' : ',',
             \ '/' : '/',
             \ '<bar>' : '<bar>',
             \ '_' : '_',
