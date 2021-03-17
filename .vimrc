@@ -27,6 +27,7 @@ set ruler
 set showcmd
 set autoindent
 set cursorline
+
 set termguicolors
 let g:indent_guides_enable_on_vim_startup=1
 let g:rainbow_active=1
@@ -34,6 +35,8 @@ let g:rainbow_active=1
 " HTML Color code Highlighting
 let g:Hexokinase_highlighters=["virtual"]
 
+let g:indent_guides_enable_on_vim_startup=1
+let g:rainbow_active=1
 set nostartofline
 set laststatus=2
 set confirm
@@ -138,6 +141,7 @@ endfunction
 " Extending text objects
 let pairs = { ':' : ':',
             \ '.' : '.',
+            \ ',' : ',',
             \ '/' : '/',
             \ '<bar>' : '<bar>',
             \ '_' : '_',
@@ -158,3 +162,11 @@ for [key, value] in items(pairs)
   exec "nnoremap ya".key." F".key."yf".key
 endfor
 
+nnoremap <C-k> :bprev<CR>
+nnoremap <C-x> :bdelete<CR>
+
+" Window Resizing
+nnoremap <silent> <A-J> :resize +3<CR>
+nnoremap <silent> <A-K> :resize -3<CR>
+nnoremap <silent> <A-H> :vertical resize -3<CR>
+nnoremap <silent> <A-L> :vertical resize +3<CR>
