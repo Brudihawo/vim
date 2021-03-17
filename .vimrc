@@ -1,4 +1,6 @@
 set nocompatible
+" Remove all autocommands
+autocmd!
 
 " Formatting
 set encoding=utf-8
@@ -63,7 +65,8 @@ let g:airline#extensions#whitespace#trailing_format='trailing[%s]'
 if !exists('g:airline_symbols')
   let g:airline_symbols={}
 endif
-let g:airline_symbols.maxlinenr = ' col'
+let g:airline_symbols.linenr = 'ln '
+let g:airline_symbols.maxlinenr = ' col '
 let g:airline_symbols.branch = ''
 let g:airline_right_alt_sep = " "
 " let g:airline_right_alt_sep = "|"
@@ -84,14 +87,29 @@ autocmd FileType vim setlocal commentstring=\"\ %s
 autocmd FileType lua setlocal commentstring=--\ %s
 autocmd FileType .xprofile setlocal commentstring=#\ %s
 
+" Source .vimrc when edited
+autocmd BufWritePost .vimrc source $MYVIMRC 
+
 " Remappings
 nnoremap <C-N> :NERDTreeToggle<CR>
 nnoremap <A-C> :colorscheme default<CR>
 nnoremap <Bar>c :set cursorline!<CR>
 nnoremap <Bar>n :set relativenumber!<CR>
 nnoremap <C-j> :bnext<CR>
-nnoremap <C-k> :bprev<CR>
+nnoremap <C-k> :bprev<CR
 nnoremap <C-x> :bdelete<CR>
+
+" Fixing brackets and braces
+:inoremap <M-#> # 
+:inoremap <M-}> } 
+:inoremap <M-[> [ 
+:inoremap <M-Bar> \|
+:inoremap <M-{> {
+:inoremap <M-Bslash> \
+:inoremap <M-^> ^ 
+:inoremap <M-@> @ 
+:inoremap <M-]> ]
+:inoremap <M-}> }
 
 " Resizing
 nnoremap <A-j> :vertical resize +3<CR>
@@ -115,7 +133,6 @@ function! s:denite_my_settings() abort
   nnoremap <silent><buffer><expr> <Space>
   \ denite#do_map('toggle_select').'j'
 endfunction
-
 
 
 " Extending text objects
