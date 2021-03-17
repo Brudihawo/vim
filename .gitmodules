@@ -64,3 +64,6 @@
 [submodule "pack/editing/start/fzf.vim"]
 	path = pack/editing/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "pack/editing/start/gruvbox"]
+	path = pack/editing/start/gruvbox
+	url = https://github.com/morhetz/gruvbox

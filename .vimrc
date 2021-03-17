@@ -1,7 +1,6 @@
 set nocompatible
 
-" Formatting
-set encoding=utf-8
+" Formatting set encoding=utf-8
 set tabstop=2 
 set shiftwidth=2
 set expandtab
@@ -25,7 +24,6 @@ set ruler
 set showcmd
 set autoindent
 set cursorline
-set termguicolors
 let g:indent_guides_enable_on_vim_startup=1
 let g:rainbow_active=1
 
@@ -46,8 +44,17 @@ set laststatus=2
 set ambiwidth=single
 
 " airline colors and colorscheme
-let g:airline_theme='deus'
-colorscheme darcula
+set termguicolors
+let g:gruvbox_bold = 1
+let g:gruvbox_transparent_bg = 0.5
+" let g:gruvbox_hls_cursor = 1
+let g:gruvbox_italicize_strings = 1
+let g:gruvbox_italic = 1
+let g:gruvbox_termcolors = 1
+let g:gruvbox_invert_selection = 1
+colorscheme gruvbox
+
+let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter="unique_tail_improved"
 let g:airline#extensions#tabline#show_splits=0
@@ -98,7 +105,7 @@ nnoremap <C-k> :bprev<CR>
 nnoremap <C-x> :bdelete<CR>
 
 " Fuzzy Finding
-nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \)', 'window':{'width': 0.9, 'height': 0.6}})<CR>
+nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \)', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat {}']})<CR>
 nnoremap <silent><C-B> :Buffers<CR>
 nnoremap <silent><C-M> :Marks<CR>
 
