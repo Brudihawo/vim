@@ -67,3 +67,6 @@
 [submodule "pack/editing/start/gruvbox"]
 	path = pack/editing/start/gruvbox
 	url = https://github.com/morhetz/gruvbox
+[submodule "pack/editing/start/vim-repeat"]
+	path = pack/editing/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat
