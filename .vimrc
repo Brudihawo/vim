@@ -110,10 +110,10 @@ nnoremap <silent><C-B> :Buffers<CR>
 nnoremap <silent><C-M> :Marks<CR>
 
 " Resizing
-nnoremap <A-j> :vertical resize +3<CR>
-nnoremap <A-k> :vertical resize -3<CR>
-nnoremap <A-h> :resize -3<CR>
-nnoremap <A-l> :resize +3<CR>
+nnoremap <A-j> :resize +3<CR>
+nnoremap <A-k> :resize -3<CR>
+nnoremap <A-h> :vertical resize -3<CR>
+nnoremap <A-l> :vertical resize +3<CR>
 
 "" Denite
 autocmd FileType denite call s:denite_my_settings()
