@@ -35,7 +35,7 @@ set laststatus=2
 set confirm
 set number relativenumber
 set notimeout ttimeout ttimeoutlen=200
-set pastetoggle=<F11>
+set pastetoggle=<F10>
 set noshowmode 
 
 " layout
@@ -105,7 +105,7 @@ nnoremap <C-k> :bprev<CR>
 nnoremap <C-x> :bdelete<CR>
 
 " Fuzzy Finding
-nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \)', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat {}']})<CR>
+nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \)', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat --color=always --decorations=always --theme=gruvbox-dark {}']})<CR>
 nnoremap <silent><C-B> :Buffers<CR>
 nnoremap <silent><C-M> :Marks<CR>
 
@@ -157,3 +157,9 @@ endfor
 
 " Filetype specific run commands
 autocmd FileType python nnoremap <leader>x :!python % <CR> 
+autocmd FileType tex nnoremap <leader>x :w <CR>:! pdflatex -interaction nonstopmode % <CR>
+
+" UltiSnips Config
+let g:UltiSnipsExpandTrigger="<c-Space>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"

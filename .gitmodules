@@ -70,3 +70,9 @@
 [submodule "pack/editing/start/vim-repeat"]
 	path = pack/editing/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat
+[submodule "pack/editing/start/ultisnips"]
+	path = pack/editing/start/ultisnips
+	url = https://github.com/SirVer/ultisnips
+[submodule "pack/editing/start/nvim-treesitter"]
+	path = pack/editing/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter
