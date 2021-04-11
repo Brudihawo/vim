@@ -76,3 +76,6 @@
 [submodule "pack/editing/start/nvim-treesitter"]
 	path = pack/editing/start/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter
+[submodule "pack/editing/start/neoscroll.nvim"]
+	path = pack/editing/start/neoscroll.nvim
+	url = https://github.com/karb94/neoscroll.nvim
