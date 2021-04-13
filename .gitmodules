@@ -79,3 +79,6 @@
 [submodule "pack/editing/start/neoscroll.nvim"]
 	path = pack/editing/start/neoscroll.nvim
 	url = https://github.com/karb94/neoscroll.nvim
+[submodule "pack/editing/start/vim-cmake-syntax"]
+	path = pack/editing/start/vim-cmake-syntax
+	url = https://github.com/pboettch/vim-cmake-syntax.git
