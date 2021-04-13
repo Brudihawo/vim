@@ -35,7 +35,7 @@ set laststatus=2
 set confirm
 set number relativenumber
 set notimeout ttimeout ttimeoutlen=200
-set pastetoggle=<F11>
+set pastetoggle=<F10>
 set noshowmode 
 
 " layout
@@ -68,6 +68,11 @@ let g:airline#extensions#vimcmake#enabled=1
 let g:airline#extensions#whitespace#enabled=1
 let g:airline_skip_empty_sections=1
 let g:airline#extensions#whitespace#trailing_format='trailing[%s]'
+
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
 
 if !exists('g:airline_symbols')
   let g:airline_symbols={}
@@ -105,15 +110,15 @@ nnoremap <C-k> :bprev<CR>
 nnoremap <C-x> :bdelete<CR>
 
 " Fuzzy Finding
-nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \)', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat {}']})<CR>
+nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \)', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat --color=always --decorations=always --theme=gruvbox-dark {}']})<CR>
 nnoremap <silent><C-B> :Buffers<CR>
 nnoremap <silent><C-M> :Marks<CR>
 
 " Resizing
 nnoremap <A-j> :resize +3<CR>
 nnoremap <A-k> :resize -3<CR>
-nnoremap <A-h> :vertical resize +3<CR>
-nnoremap <A-l> :vertical resize -3<CR>
+nnoremap <A-h> :vertical resize -3<CR>
+nnoremap <A-l> :vertical resize +3<CR>
 
 "" Denite
 autocmd FileType denite call s:denite_my_settings()
@@ -157,3 +162,15 @@ endfor
 
 " Filetype specific run commands
 autocmd FileType python nnoremap <leader>x :!python % <CR> 
+autocmd FileType tex nnoremap <leader>x :w <CR>:! pdflatex -interaction nonstopmode % <CR>
+
+" UltiSnips Config
+let g:UltiSnipsExpandTrigger="<c-Space>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Quickfix lists
+nnoremap <C-Q>:call ToggleQFlist(0)<CR>
+nnoremap <leader>cn :cnext<CR>
+nnoremap <leader>cp :cprev<CR>
+
