@@ -82,3 +82,9 @@
 [submodule "pack/editing/start/vim-cmake-syntax"]
 	path = pack/editing/start/vim-cmake-syntax
 	url = https://github.com/pboettch/vim-cmake-syntax.git
+[submodule "pack/editing/start/vimspector"]
+	path = pack/editing/start/vimspector
+	url = https://github.com/puremourning/vimspector
+[submodule "pack/editing/start/markdown-preview.nvim"]
+	path = pack/editing/start/markdown-preview.nvim
+	url = https://github.com/iamcco/markdown-preview.nvim
