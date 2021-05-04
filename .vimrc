@@ -108,10 +108,12 @@ nnoremap <leader>n :set relativenumber!<CR>
 nnoremap <C-j> :bnext<CR>
 nnoremap <C-k> :bprev<CR>
 nnoremap <C-x> :bdelete<CR>
+nnoremap <leader>dgj :diffget //2<CR>
+nnoremap <leader>dgk :diffget //3<CR>
 
 " Fuzzy Finding
-nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \)', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat --color=always --decorations=always --theme=gruvbox-dark {}']})<CR>
-nnoremap <silent><C-B> :Buffers<CR>
+nnoremap <silent><C-p> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \)', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat --color=always --decorations=always --theme=gruvbox-dark {}']})<CR>
+nnoremap <silent><A-b> :Buffers<CR>
 nnoremap <silent><C-M> :Marks<CR>
 
 " Resizing
