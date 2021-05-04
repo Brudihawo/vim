@@ -112,8 +112,8 @@ nnoremap <leader>dgj :diffget //2<CR>
 nnoremap <leader>dgk :diffget //3<CR>
 
 " Fuzzy Finding
-nnoremap <silent><C-p> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \)', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat --color=always --decorations=always --theme=gruvbox-dark {}']})<CR>
-nnoremap <silent><A-b> :Buffers<CR>
+nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \) 2> /dev/null', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat --color=always --decorations=always --theme=gruvbox-dark {}']})<CR>
+nnoremap <silent><C-B> :Buffers<CR>
 nnoremap <silent><C-M> :Marks<CR>
 
 " Resizing
@@ -176,3 +176,22 @@ nnoremap <C-Q>:call ToggleQFlist(0)<CR>
 nnoremap <leader>cn :cnext<CR>
 nnoremap <leader>cp :cprev<CR>
 
+" Vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
+" F5	          When debugging, continue. Otherwise start debugging.
+" F3	          Stop debugging.
+" F4	          Restart debugging with the same configuration.
+" F6	          Pause debuggee.
+" F9	          Toggle line breakpoint on the current line.
+" <leader>F9	  Toggle conditional line breakpoint on the current line.
+" F8	          Add a function breakpoint for the expression under cursor
+" <leader>F8	  Run to Cursor
+" F10	          Step Over
+" F11	          Step Into
+" F12	          Step out of current function scope
+
+nmap <leader>vba <Plug>VimspectorBalloonEval
+xmap <leader>vba <Plug>VimspectorBalloonEval
+
+" Markdown Preview
+let g:mkdp_browser = 'opera'
