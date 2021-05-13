@@ -100,6 +100,9 @@ autocmd FileType lua setlocal commentstring=--\ %s
 autocmd FileType xprofile setlocal commentstring=#\ %s
 autocmd FileType fish setlocal commentstring=#\ %s
 
+" Setting Filetype Specific Colorcolumn
+autocmd FileType python setlocal colorcolumn=80
+
 " Remappings
 nnoremap <C-N> :NERDTreeToggle<CR>
 nnoremap <A-C> :colorscheme default<CR>
@@ -110,7 +113,7 @@ nnoremap <C-k> :bprev<CR>
 nnoremap <C-x> :bdelete<CR>
 
 " Fuzzy Finding
-nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \)', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat --color=always --decorations=always --theme=gruvbox-dark {}']})<CR>
+nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat --color=always --decorations=always --theme=gruvbox-dark {}']})<CR>
 nnoremap <silent><C-B> :Buffers<CR>
 nnoremap <silent><C-M> :Marks<CR>
 
@@ -171,6 +174,20 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Quickfix lists
 nnoremap <C-Q>:call ToggleQFlist(0)<CR>
-nnoremap <leader>cn :cnext<CR>
-nnoremap <leader>cp :cprev<CR>
+nnoremap :cn :cnext<CR>
+nnoremap :cp :cprev<CR>
+nnoremap :ln :lnext<CR>
+nnoremap :lp :lprev<CR>
+
+" Syntastic Options
+let g:syntastic_python_checkers = ['flake8', 'pydocstyle']
+let g:syntastic_python_flake8_args = "--ignore=E501,W504"
+let g:syntastic_python_pydocstyle_args = "--convention=google"
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_w = 0
+let g:syntastic_aggregate_errors = 1
+
+
+nnoremap cs :SyntasticCheck<CR>
 
