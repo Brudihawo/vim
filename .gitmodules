@@ -55,3 +55,30 @@
 [submodule "pack/editing/start/vim-surround"]
 	path = pack/editing/start/vim-surround
 	url = https://github.com/tpope/vim-surround
+[submodule "pack/editing/start/fzf"]
+	path = pack/editing/start/fzf
+	url = https://github.com/junegunn/fzf
+[submodule "pack/editing/start/vim-fish"]
+	path = pack/editing/start/vim-fish
+	url = https://github.com/dag/vim-fish
+[submodule "pack/editing/start/fzf.vim"]
+	path = pack/editing/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "pack/editing/start/gruvbox"]
+	path = pack/editing/start/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule "pack/editing/start/vim-repeat"]
+	path = pack/editing/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule "pack/editing/start/ultisnips"]
+	path = pack/editing/start/ultisnips
+	url = https://github.com/SirVer/ultisnips
+[submodule "pack/editing/start/nvim-treesitter"]
+	path = pack/editing/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter
+[submodule "pack/editing/start/neoscroll.nvim"]
+	path = pack/editing/start/neoscroll.nvim
+	url = https://github.com/karb94/neoscroll.nvim
+[submodule "pack/editing/start/vim-cmake-syntax"]
+	path = pack/editing/start/vim-cmake-syntax
+	url = https://github.com/pboettch/vim-cmake-syntax.git
