@@ -88,3 +88,15 @@
 [submodule "pack/editing/start/markdown-preview.nvim"]
 	path = pack/editing/start/markdown-preview.nvim
 	url = https://github.com/iamcco/markdown-preview.nvim
+[submodule "pack/editing/start/taglist.vim"]
+	path = pack/editing/start/taglist.vim
+	url = https://github.com/mtth/taglist.vim
+[submodule "pack/editing/start/taglist"]
+	path = pack/editing/start/taglist
+	url = https://github.com/yegappan/taglist
+[submodule "pack/editing/start/tagbar"]
+	path = pack/editing/start/tagbar
+	url = https://github.com/preservim/tagbar
+[submodule "pack/editing/start/vimtex"]
+	path = pack/editing/start/vimtex
+	url = https://github.com/lervag/vimtex

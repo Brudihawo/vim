@@ -1,7 +1,7 @@
 set nocompatible
 
 " Formatting set encoding=utf-8
-set tabstop=2 
+set tabstop=2
 set shiftwidth=2
 set expandtab
 set backspace=indent,eol,start
@@ -36,7 +36,7 @@ set confirm
 set number relativenumber
 set notimeout ttimeout ttimeoutlen=200
 set pastetoggle=<F10>
-set noshowmode 
+set noshowmode
 
 " layout
 set cmdheight=5
@@ -44,7 +44,7 @@ set laststatus=2
 set ambiwidth=single
 
 " airline colors and colorscheme
-set termguicolors
+" set termguicolors
 let g:gruvbox_bold = 1
 let g:gruvbox_transparent_bg = 0.5
 " let g:gruvbox_hls_cursor = 1
@@ -100,8 +100,7 @@ autocmd FileType lua setlocal commentstring=--\ %s
 autocmd FileType xprofile setlocal commentstring=#\ %s
 autocmd FileType fish setlocal commentstring=#\ %s
 
-" Remappings
-nnoremap <C-N> :NERDTreeToggle<CR>
+" Remappings nnoremap <C-N> :NERDTreeToggle<CR>
 nnoremap <A-C> :colorscheme default<CR>
 nnoremap <leader>c :set cursorline!<CR>
 nnoremap <leader>n :set relativenumber!<CR>
@@ -120,23 +119,6 @@ nnoremap <A-k> :resize -3<CR>
 nnoremap <A-h> :vertical resize -3<CR>
 nnoremap <A-l> :vertical resize +3<CR>
 
-"" Denite
-autocmd FileType denite call s:denite_my_settings()
-function! s:denite_my_settings() abort
-  nnoremap <silent><buffer><expr> <CR>
-  \ denite#do_map('do_action')
-  nnoremap <silent><buffer><expr> d
-  \ denite#do_map('do_action', 'delete')
-  nnoremap <silent><buffer><expr> p
-  \ denite#do_map('do_action', 'preview')
-  nnoremap <silent><buffer><expr> q
-  \ denite#do_map('quit')
-  nnoremap <silent><buffer><expr> i
-  \ denite#do_map('open_filter_buffer')
-  nnoremap <silent><buffer><expr> <Space>
-  \ denite#do_map('toggle_select').'j'
-endfunction
-
 " Extending text objects
 let pairs = { ':' : ':',
             \ '.' : '.',
@@ -152,7 +134,7 @@ for [key, value] in items(pairs)
 
   exec "nnoremap di".key." T".key."dt".key
   exec "nnoremap da".key." F".key."df".key
-  
+
   exec "nnoremap vi".key." T".key."vt".key
   exec "nnoremap va".key." F".key."vf".key
 
@@ -161,7 +143,7 @@ for [key, value] in items(pairs)
 endfor
 
 " Filetype specific run commands
-autocmd FileType python nnoremap <leader>x :!python % <CR> 
+autocmd FileType python nnoremap <leader>x :!python % <CR>
 autocmd FileType tex nnoremap <leader>x :w <CR>:! pdflatex -interaction nonstopmode % <CR>
 
 " UltiSnips Config
@@ -173,6 +155,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 nnoremap <C-Q>:call ToggleQFlist(0)<CR>
 nnoremap <leader>cn :cnext<CR>
 nnoremap <leader>cp :cprev<CR>
+nnoremap <leader>ln :lnext<CR>
+nnoremap <leader>lp :lprev<CR>
 
 " Vimspector
 let g:vimspector_enable_mappings = 'HUMAN'
@@ -190,6 +174,30 @@ let g:vimspector_enable_mappings = 'HUMAN'
 
 nmap <leader>vba <Plug>VimspectorBalloonEval
 xmap <leader>vba <Plug>VimspectorBalloonEval
+nmap <leader>vsr <Plug>VimspectorReset
+xmap <leader>vsr <Plug>VimspectorReset
 
 " Markdown Preview
-let g:mkdp_browser = 'opera'
+let g:mkdp_browser = 'firefox'
+
+" Syntastic Options
+let g:syntastic_python_checkers=["flake8", "pydocstyle"]
+let g:syntastic_python_flake8_args="--ignore=E501,W504"
+let g:syntastic_python_pydocstyle_args="--convention=google"
+let g:syntastic_check_on_open=0
+let g:syntastic_check_on_wq=0
+let g:syntastic_check_on_w=0
+let g_syntastic_aggregate_errors=1
+
+" Color Column
+set colorcolumn=80,100
+
+" Tagbar
+" Bar open
+nnoremap <leader>bo :Tagbar<CR> 
+" Show tag
+nnoremap <leader>st :TagbarShowTag<CR>
+
+" VimTeX
+let g:vimtex_compiler_name = 'nvr'
+
