@@ -113,31 +113,13 @@ nnoremap <leader>dgk :diffget //3<CR>
 
 " Fuzzy Finding
 nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \) 2> /dev/null', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat --color=always --decorations=always --theme=gruvbox-dark {}']})<CR>
-nnoremap <silent><C-B> :Buffers<CR>
-nnoremap <silent><C-M> :Marks<CR>
+nnoremap <silent><A-Enter> :Buffers<CR>
 
 " Resizing
 nnoremap <A-j> :resize +3<CR>
 nnoremap <A-k> :resize -3<CR>
 nnoremap <A-h> :vertical resize -3<CR>
 nnoremap <A-l> :vertical resize +3<CR>
-
-"" Denite
-autocmd FileType denite call s:denite_my_settings()
-function! s:denite_my_settings() abort
-  nnoremap <silent><buffer><expr> <CR>
-  \ denite#do_map('do_action')
-  nnoremap <silent><buffer><expr> d
-  \ denite#do_map('do_action', 'delete')
-  nnoremap <silent><buffer><expr> p
-  \ denite#do_map('do_action', 'preview')
-  nnoremap <silent><buffer><expr> q
-  \ denite#do_map('quit')
-  nnoremap <silent><buffer><expr> i
-  \ denite#do_map('open_filter_buffer')
-  nnoremap <silent><buffer><expr> <Space>
-  \ denite#do_map('toggle_select').'j'
-endfunction
 
 " Extending text objects
 let pairs = { ':' : ':',
