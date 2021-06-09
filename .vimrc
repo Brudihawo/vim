@@ -111,8 +111,12 @@ nnoremap <leader>dgj :diffget //2<CR>
 nnoremap <leader>dgk :diffget //3<CR>
 
 " Fuzzy Finding
-nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \) 2> /dev/null', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat --color=always --decorations=always --theme=gruvbox-dark {}']})<CR>
-nnoremap <silent><A-Enter> :Buffers<CR>
+" nnoremap <silent><C-P> :call fzf#run({'sink': 'e', 'source': 'find . -type f -a ! \( -wholename "*.git/*" \) 2> /dev/null', 'window':{'width': 0.9, 'height': 0.6}, 'options': ['--preview', 'bat --color=always --decorations=always --theme=gruvbox-dark {}']})<CR>
+" nnoremap <silent><A-Enter> :Buffers<CR>
+nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <C-g> <cmd>Telescope live_grep<cr>
+nnoremap <C-b> <cmd>Telescope buffers<cr> 
+nnoremap <C-h> <cmd>Telescope help_tags<cr>
 
 " Resizing
 nnoremap <A-j> :resize +3<CR>

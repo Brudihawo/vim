@@ -100,3 +100,12 @@
 [submodule "pack/editing/start/vimtex"]
 	path = pack/editing/start/vimtex
 	url = https://github.com/lervag/vimtex
+[submodule "pack/editing/start/telescope.nvim"]
+	path = pack/editing/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim
+[submodule "pack/editing/start/popup.nvim"]
+	path = pack/editing/start/popup.nvim
+	url = https://github.com/nvim-lua/popup.nvim
+[submodule "pack/editing/start/plenary.nvim"]
+	path = pack/editing/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim
