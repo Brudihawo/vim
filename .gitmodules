@@ -109,3 +109,6 @@
 [submodule "pack/editing/start/plenary.nvim"]
 	path = pack/editing/start/plenary.nvim
 	url = https://github.com/nvim-lua/plenary.nvim
+[submodule "pack/editing/start/nvim-lspconfig"]
+	path = pack/editing/start/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig
