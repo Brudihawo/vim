@@ -112,3 +112,18 @@
 [submodule "pack/editing/start/nvim-lspconfig"]
 	path = pack/editing/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig
+[submodule "pack/editing/start/coc.nvim"]
+	path = pack/editing/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim
+[submodule "pack/editing/start/vim-cmake"]
+	path = pack/editing/start/vim-cmake
+	url = https://github.com/cdelledonne/vim-cmake
+[submodule "pack/editing/start/telescope-fzf-writer.nvim"]
+	path = pack/editing/start/telescope-fzf-writer.nvim
+	url = https://github.com/nvim-telescope/telescope-fzf-writer.nvim
+[submodule "pack/editing/start/ale"]
+	path = pack/editing/start/ale
+	url = https://github.com/dense-analysis/ale
+[submodule "pack/editing/start/telescope-coc.nvim"]
+	path = pack/editing/start/telescope-coc.nvim
+	url = https://github.com/fannheyward/telescope-coc.nvim
