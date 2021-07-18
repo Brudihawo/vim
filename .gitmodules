@@ -127,3 +127,9 @@
 [submodule "pack/editing/start/telescope-coc.nvim"]
 	path = pack/editing/start/telescope-coc.nvim
 	url = https://github.com/fannheyward/telescope-coc.nvim
+[submodule "pack/editing/start/telescope-fzf-native.nvim"]
+	path = pack/editing/start/telescope-fzf-native.nvim
+	url = https://github.com/nvim-telescope/telescope-fzf-native.nvim.git
+[submodule "pack/editing/start/telescope-ultisnips.nvim"]
+	path = pack/editing/start/telescope-ultisnips.nvim
+	url = https://github.com/fhill2/telescope-ultisnips.nvim
