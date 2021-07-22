@@ -133,3 +133,6 @@
 [submodule "pack/editing/start/telescope-ultisnips.nvim"]
 	path = pack/editing/start/telescope-ultisnips.nvim
 	url = https://github.com/fhill2/telescope-ultisnips.nvim
+[submodule "pack/editing/start/vim-gitgutter"]
+	path = pack/editing/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
