@@ -136,3 +136,18 @@
 [submodule "pack/editing/start/vim-gitgutter"]
 	path = pack/editing/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+[submodule "pack/editing/start/hop.nvim"]
+	path = pack/editing/start/hop.nvim
+	url = https://github.com/phaazon/hop.nvim
+[submodule "pack/editing/start/lualine.nvim"]
+	path = pack/editing/start/lualine.nvim
+	url = https://github.com/hoob3rt/lualine.nvim
+[submodule "pack/editing/start/nvim-web-devicons"]
+	path = pack/editing/start/nvim-web-devicons
+	url = https://github.com/kyazdani42/nvim-web-devicons
+[submodule "pack/editing/start/barbar.nvim"]
+	path = pack/editing/start/barbar.nvim
+	url = https://github.com/romgrk/barbar.nvim
+[submodule "pack/editing/start/minimap.vim"]
+	path = pack/editing/start/minimap.vim
+	url = https://github.com/wfxr/minimap.vim
