@@ -151,3 +151,9 @@
 [submodule "pack/editing/start/minimap.vim"]
 	path = pack/editing/start/minimap.vim
 	url = https://github.com/wfxr/minimap.vim
+[submodule "pack/editing/start/lspsaga.nvim"]
+	path = pack/editing/start/lspsaga.nvim
+	url = https://github.com/glepnir/lspsaga.nvim
+[submodule "pack/editing/start/nvim-compe"]
+	path = pack/editing/start/nvim-compe
+	url = https://github.com/hrsh7th/nvim-compe
